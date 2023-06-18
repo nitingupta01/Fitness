@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/cd3dbc6c90.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="navbar.js"></script>
+    <script src="dashboard.js"></script>
+
+    <title>DASHBOARD</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a class="name" href="index.html">FITNESSFREAK</a>
+            <a class="bar" onclick="show()"><i class="fa-solid fa-bars"></i></a>
+            <a class="item" href="planspage.html">PLANS</a>
+            <a class="item" href="login.html">LOGIN</a>
+        </div>
+    </nav>
+
+    <div class="stats-box">
+        <h1>STATS</h1>
+        <div class="stat-info">
+            <div class="stat-small-box">
+                <h1 id="key1">0</h1>
+                <p>Distance (miles)</p>
+            </div>
+            <div class="stat-small-box">
+                <h1 id="key2">0</h1>
+                <p>Duration (minutes)</p>
+            </div><div class="stat-small-box">
+                <h1 id="key3">0</h1>
+                <p>Calories (Kcal)</p>
+            </div><div class="stat-small-box">
+                <h1 id="key4">0</h1>
+                <p>Workouts (number)</p>
+            </div>
+            <div class="stat-form">
+                <h5>ADD LAST WORKOUT</h5>
+                <form>
+                    <input type="number" id="dist" value="" placeholder="ENTER DISTANCE">
+                    <input type="number" id="dur" value="" placeholder="ENTER DURATION IN HOURS">
+                    <input type="number" id="cal" value="" placeholder="ENTER CALORIES BURNT">
+                    <button type="button" class="add-button" onclick="adddata()">+</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="goals-box">
+        <h1>GOALS</h1>
+        <div class="goal-info">
+            <div class="create-goal">
+                <h4>STAY FOCUSSED</h4>
+                <a id="creator"> + CREATE A GOAL</a>
+            </div>
+            <div id="target" class="create-goal-form-box">
+                <form>
+                    <input type="text" id="id1" value="" placeholder="ENTER YOUR GOAL NAME">
+                    <input type="number" id="id2" value="" placeholder="ENTER GOAL DURATION (HOURS)">
+                    <input type="time" id="id3" value="" placeholder="ENTER GOAL DEADLINE">
+                    <button type="button" onclick="addgoal()">+</button>
+                </form>
+            </div>
+            <hr>
+            <div class="active-goals">
+                <h3>ACTIVE GOALS</h3>
+                <table id="goals-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <th>GOAL NAME</th>
+                        <th>GOAL DURATION</th>
+                        <th>GOAL DEADLINE</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
